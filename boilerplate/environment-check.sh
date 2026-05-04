@@ -29,7 +29,7 @@ if [[ -r /etc/os-release ]]; then
     source /etc/os-release
     [[ "${ID:-}" == "ubuntu" ]] || fail "Unsupported distro: ${ID:-unknown}. Use Ubuntu 22.04/24.04 VM."
     case "${VERSION_ID:-}" in
-        22.04|24.04) ok "Ubuntu version ${VERSION_ID} detected." ;;
+       20.04|22.04|24.04) ok "Ubuntu version ${VERSION_ID} detected." ;;
         *) fail "Unsupported Ubuntu version: ${VERSION_ID:-unknown}. Use 22.04 or 24.04." ;;
     esac
 else
